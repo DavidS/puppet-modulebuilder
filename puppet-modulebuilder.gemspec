@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'A gem to set up puppet-modulebuilder'
   spec.homepage      = 'https://github.com/puppetlabs/puppet-modulebuilder'
-  spec.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
+  spec.required_ruby_version = Gem::Requirement.new('>= 2.1.9')
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = 'https://github.com/puppetlabs/puppet-modulebuilder'
