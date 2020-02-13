@@ -7,5 +7,8 @@ gemspec
 
 gem 'rake', '~> 12.0'
 gem 'rspec', '~> 3.0'
-gem 'rubocop'
-gem 'rubocop-rspec'
+
+group :rubocop do
+  gem 'rubocop'
+  gem 'rubocop-rspec'
+end

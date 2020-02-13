@@ -2,6 +2,10 @@
 os: linux
 language: ruby
 cache: bundler
-rvm:
-  - 2.5.3
-before_install: gem install bundler -v 2.1.4
+jobs:
+  include:
+  - rvm: 2.5.7
+    before_install: gem install bundler -v 2.1.4
+  - rvm: 2.1.9
+    install: "rm -f Gemfile.lock && bundle install --jobs=3 --retry=3 --path=${BUNDLE_PATH:-vendor/bundle} --without rubocop # don't run rubocop on ancient ruby"
+    script: "bundle exec rake spec # don't run rubocop on ancient ruby"
